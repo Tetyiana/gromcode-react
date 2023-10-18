@@ -5,10 +5,7 @@ import './styles.css';
 const rootElement = document.querySelector('#root');
 
 const elem = (
-  <div className='greeting' >
-    <h1 className='greeting__title'>Hello, world!</h1>
-    <p className='greeting__text'>I am learning React</p>
-  </div>
+  <div className='greeting' ><h1 className='greeting__title'>Hello, world!</h1><p className='greeting__text'>I am learning React</p></div>
 );
 
 
