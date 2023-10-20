@@ -28,7 +28,7 @@ module.exports = (env, argv) => {
       ],
     },
     resolve: {
-      extensions: ['.js', '.jsx'],
+      extensions: ['.jsx'],
     },
     plugins: [
       new webpack.ProgressPlugin(),
