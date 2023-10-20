@@ -4,7 +4,7 @@ import moment from 'moment';
 const Profile = (props) => {
   const { firstName, lastName, birthDate, birthPlace } = props;
 
-  const birthDateMoment = moment(birthDate, 'DD MMM YY').format('DD MMM YYYY'); 
+  const birthDateMoment = moment(birthDate, 'DD MMM YY').format('DD MMM YY'); 
 
   return (
     <>
