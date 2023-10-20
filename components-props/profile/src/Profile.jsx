@@ -1,20 +1,15 @@
 import React from 'react';
 import moment from 'moment';
-// const userData = {
-//   firstName: 'James',
-//   lastName: 'Bond',
-//   birthDate: '1991-01-17',
-//   birthPlace: 'London',
-// };
 
-const Profile = (props) => {
+
+const Profile = ({ userData }) => {
   return (
     <>
       <div className="profile_name">
-        {`${props.userData.firstName} ${props.userData.lastName}`}
+        {`${userData.firstName} ${userData.lastName}`}
       </div>
       <div className="profile_birth">
-        {`Was born ${moment(props.userData.birthDate, 'DD MMM YY').format('DD MMM YY')} in ${props.userData.birthPlace}`}
+        {`Was born ${moment(userData.birthDate, 'DD MMM YY').format('DD MMM YY')} in ${userData.birthPlace}`}
       </div>
     </>
   );
