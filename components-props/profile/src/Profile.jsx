@@ -4,19 +4,19 @@ import moment from 'moment';
 
 
 const Profile = ({ userData }) => {
+  const { firstName, lastName, birthDate, birthPlace } = userData;
 
-
-  userData.birthDate = moment(userData.birthDate).format('DD MMM YYYY');
+  formatDate = moment(userData.birthDate).format('DD MMM YYYY');
   
   return (
-    <>
+    <div className="profile" >
       <div className="profile_name">
-        {`${userData.firstName} ${userData.lastName}`}
+        {`${firstName} ${lastName}`}
       </div>
       <div className="profile_birth">
-        {`Was born ${userData.birthDate} in ${userData.birthPlace}`}
+        {`Was born ${formatDate} in ${birthPlace}`}
       </div>
-    </>
+    </div>
   );
 }
 
