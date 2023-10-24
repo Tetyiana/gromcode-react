@@ -5,8 +5,8 @@ class Clock extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      offset: props.ofset,
-      currentTime: this.getTimeWithOffset(props.ofset),
+      offset: props.offset,
+      currentTime: this.getTimeWithOffset(props.offset),
     };
 
     setInterval(() => {
