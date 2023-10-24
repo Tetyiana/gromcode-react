@@ -11,7 +11,7 @@ class Clock extends Component {
 
     setInterval(() => {
       this.setState({
-        currentTime: this.getTimeWithOffset(this.props.start),
+        currentTime: this.getTimeWithOffset(this.state.timeZone),
       });
     }, 1000);
   }
@@ -19,7 +19,8 @@ class Clock extends Component {
   getTimeWithOffset = (offset) => {
     const currentTime = new Date();
     const utcOffset = currentTime.getTimezoneOffset() / 60;
-    return new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset));
+    const adjustedTime = new Date(currentTime.setHours(currentTime.getUTCHours() + offset + utcOffset));
+    return adjustedTime;
   };
 
   render() {
@@ -33,3 +34,4 @@ class Clock extends Component {
 }
 
 export default Clock;
+
