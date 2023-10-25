@@ -3,6 +3,7 @@ import React, { Component } from "react";
 const RED = '#f00';
 const GREEN = '#0f0';
 const BLUE = '#00f';
+
 class Colors extends Component {
   setBodyColor = color => {
     document.body.style.background = color;
@@ -13,17 +14,17 @@ class Colors extends Component {
         <button
           className="counter__button"
           style={{ background: RED, }}
-          onClick={this.setBodyColor.bind(this, RED)}
+          onClick={() => { this.setBodyColor(RED) }}
         ></button>
         <button
           className="counter__button"
           style={{ background: GREEN, }}
-          onClick={this.setBodyColor.bind(this, GREEN)}
+          onClick={() => { this.setBodyColor(GREEN) }}
         ></button>
         <button
           className="counter__button"
           style={{ background: BLUE, }}
-          onClick={this.setBodyColor.bind(this, BLUE)}
+          onClick={() => { this.setBodyColor(BLUE) }}
         ></button>
       </div>
     )
