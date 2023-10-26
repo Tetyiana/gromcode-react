@@ -9,7 +9,7 @@ class Toggler extends Component {
   }
 
   toggleButton = () => {
-    const newButtonState = this.state.buttonToggler === 'On' ? 'Off' : 'On';
+    const newButtonState = this.state.buttonToggler === 'Off' ? 'On' : 'Off';
     this.setState({
       buttonToggler: newButtonState,
     });
