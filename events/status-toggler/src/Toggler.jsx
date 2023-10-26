@@ -4,13 +4,13 @@ class Toggler extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      buttonToggler: false,
+      active: false,
     };
   }
 
  toggleButton = () => {
     this.setState({
-      buttonToggler: !this.state.buttonToggler,
+      active: !this.state.active,
     });
   }
 
@@ -18,7 +18,7 @@ class Toggler extends Component {
     return (
       <div className="toggler">
         <span className="counter__value" onClick={this.toggleButton}>
-          {this.state.buttonToggler ? 'On' : 'Off'}
+          {this.state.active ? 'On' : 'Off'}
         </span>
       </div>
     );
