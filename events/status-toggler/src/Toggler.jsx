@@ -16,11 +16,11 @@ class Toggler extends Component {
 
   render() {
     return (
-      <div className="toggler">
-        <span className="counter__value" onClick={this.toggleButton}>
-          {this.state.active ? 'On' : 'Off'}
-        </span>
+      
+      <div className="toggler" onClick={this.toggleButton}>
+        {this.state.active ? 'On' : 'Off'}
       </div>
+    
     );
   }
 }
