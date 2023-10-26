@@ -4,14 +4,13 @@ class Toggler extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      buttonToggler: 'Off',
+      buttonToggler: false,
     };
   }
 
-  toggleButton = () => {
-    const newButtonState = this.state.buttonToggler === 'Off' ? 'On' : 'Off';
+ toggleButton = () => {
     this.setState({
-      buttonToggler: newButtonState,
+      buttonToggler: !this.state.buttonToggler,
     });
   }
 
@@ -19,7 +18,7 @@ class Toggler extends Component {
     return (
       <div className="toggler">
         <span className="counter__value" onClick={this.toggleButton}>
-          {this.state.buttonToggler}
+          {this.state.buttonToggler ? 'On' : 'Off'}
         </span>
       </div>
     );
