@@ -1,7 +1,7 @@
 import React from "react";
 
-const LoginButton = ({ onLogin }) => {
+const Login = ({ onLogin }) => {
   return <button className="btn login" onClick={onLogin}>Login</button>;
 };
 
-export default LoginButton;
+export default Login;
