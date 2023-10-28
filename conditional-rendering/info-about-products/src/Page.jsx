@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import  Info  from "./Info.jsx";
 
-const text1 = 'Price is 500$. Available in 2 colors';
-const text2 = 'Price is 650$. Not available in 1 color';
+const text1 = 'IPhone 13 - Price is 500$. Available in 2 colors';
+const text2 = 'Price is 650$. Not available';
 
 
 class Page extends Component {
@@ -20,7 +20,7 @@ class Page extends Component {
   render() {
       return (
     <div className="page">
-          <div className="text"><Info text={this.state.text} /></div>
+          <div className="text"><Info text={this.state.text}/></div>
   <div className="actions">
     <button className="btn" onClick={()=>{this.setText(text1)}} >IPhone 13</button>
     <button className="btn" onClick={()=>{this.setText(text2)}}>IPhone 13</button>
