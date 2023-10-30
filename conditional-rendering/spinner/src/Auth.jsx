@@ -32,13 +32,16 @@ class Auth extends Component {
     });
   }
 
-  render() {
-    return (
-        this.state.showSpinner && <Spinner size={30} /> ||
-        this.state.isLogin && <Logout onClick={this.handleLogout} /> ||
-        <Login onClick={this.handleLogin} />
-    );
+ render() {
+  if (this.state.showSpinner) {
+    return <Spinner size={30} />;
+  } else if (this.state.isLogin) {
+    return <Logout onClick={this.handleLogout} />;
+  } else {
+    return <Login onClick={this.handleLogin} />;
   }
+}
+
 }
 
 export default Auth;
