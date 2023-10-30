@@ -16,7 +16,7 @@ class UsersList extends Component {
   };
   
   render() {
-    console.log(this.props.users);
+  
     let usersList;
   
     if (this.state.sorting) {
