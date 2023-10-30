@@ -9,12 +9,12 @@ class Page extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: null,
+      info: null,
     };
   }
-  setText = text => {
+  setText = info => {
     this.setState({
-      text
+      info
     })
   };
   render() {
