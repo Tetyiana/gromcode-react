@@ -9,21 +9,22 @@ class Page extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      info: null,
+      text: null,
     };
   }
-  setText = info => {
+  setText = text => {
     this.setState({
-      info
+      text
     })
   };
+
   render() {
       return (
     <div className="page">
-        <Info info={this.state.info}/>
+        <Info info={this.state.text}/>
   <div className="actions">
     <button className="btn" onClick={()=>{this.setText(text1)}} >IPhone 13</button>
-    <button className="btn" onClick={()=>{this.setText(text2)}}>IPhone 13</button>
+    <button className="btn" onClick={()=>{this.setText(text2)}}>{null}</button>
     <button className="btn" onClick={()=>{this.setText(null)}}>Clear</button>
   </div>
     </div>
