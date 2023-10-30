@@ -23,9 +23,9 @@ class Page extends Component {
     <div className="page">
         <Info info={this.state.text}/>
   <div className="actions">
-    <button className="btn" onClick={()=>{this.setText(text1)}} >IPhone 13</button>
-    <button className="btn" onClick={()=>{this.setText(text2)}}>{null}</button>
-    <button className="btn" onClick={()=>{this.setText(null)}}>Clear</button>
+    <button className="btn" onClick={()=>{this.setText(text1)}} ></button>
+    <button className="btn" onClick={()=>{this.setText(text2)}}></button>
+    <button className="btn" onClick={()=>{this.setText(null)}}></button>
   </div>
     </div>
   )
