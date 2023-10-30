@@ -34,7 +34,7 @@ class Auth extends Component {
 
  render() {
   if (this.state.showSpinner) {
-    return <Spinner size={30} />;
+    return <Spinner size={} />;
   } else if (this.state.isLogin) {
     return <Logout onClick={this.handleLogout} />;
   } else {
