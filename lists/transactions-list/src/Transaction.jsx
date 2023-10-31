@@ -13,7 +13,7 @@ const Transaction = ({ transaction }) => {
       <span className="transaction__time">{formattedTime}</span>
       <span className="transaction__assets">{assets}</span>
       <span className="transaction__rate">{rate}</span>
-      <span className="transaction__amount">{amount}</span>
+      <span className="transaction__amount">{new Intl.NumberFormat('en-GB').format(amount)}</span>
     </li>
   );
 }
