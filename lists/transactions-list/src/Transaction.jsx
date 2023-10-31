@@ -16,7 +16,7 @@ const Transaction = ({ transaction }) => {
       <span className="transaction__time">{formattedTime}</span>
       <span className="transaction__assets">{assets}</span>
       <span className="transaction__rate">{formattedRate}</span>
-      <span className="transaction__amount">{formattedAmount}</span>
+      <span className="transaction__amount">{amount}</span>
     </li>
   );
 }
