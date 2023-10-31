@@ -1,7 +1,7 @@
 import React from "react";
 import moment from 'moment';
 
-const RenderTransaction = ({ transaction }) => {
+const Transaction = ({ transaction }) => {
   const { time, rate, amount, from, to } = transaction;
   const assets = `${from} → ${to}`;
   const formattedTime = moment(time).format('HH:mm');
@@ -21,4 +21,4 @@ const RenderTransaction = ({ transaction }) => {
   );
 }
 
-export default RenderTransaction;
+export default Transaction;
