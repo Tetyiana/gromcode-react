@@ -1,8 +1,8 @@
 import React from "react";
 import moment from 'moment';
 
-const Transaction = ({ transaction }) => {
-  const { time, rate, amount, from, to } = transaction;
+const Transaction = ({ time, rate, amount, from, to  }) => {
+  // const { time, rate, amount, from, to } = transaction;
   const assets = `${from} → ${to}`;
   const formattedTime = moment(time).format('HH:mm');
   const formattedDate = moment(time).format('DD MMM');
