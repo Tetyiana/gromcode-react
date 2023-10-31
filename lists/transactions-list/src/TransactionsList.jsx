@@ -1,12 +1,12 @@
 import React from "react";
-import Transaction from "./Transaction.jsx";
+import RenderTransaction from "./Transaction.jsx";
 
-const TransactionsList = ({ transactions }) => {
+const Transaction = ({ transactions }) => {
   return (
     <ul className="transactions">
-      {transactions.map(transaction => <Transaction key={transaction.id} transaction={transaction} />)}
+      {transactions.map(transaction => <RenderTransaction key={transaction.id} transaction={transaction} />)}
     </ul>
   );
 }
 
-export default TransactionsList;
+export default Transaction;
