@@ -7,7 +7,7 @@ const Transaction = ({ transaction }) => {
   const formattedTime = moment(time).format('HH:mm');
   const formattedDate = moment(time).format('DD MMM');
   // const formattedRate = new Intl.NumberFormat('en-GB').format(rate);
-  // const formattedAmount = new Intl.NumberFormat('en-GB').format(amount);
+  const formattedAmount = new Intl.NumberFormat('en-GB').format(amount);
 
 
   return (
