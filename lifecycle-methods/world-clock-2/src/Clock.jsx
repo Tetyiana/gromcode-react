@@ -5,37 +5,44 @@ class Clock extends Component {
   constructor(props) {
     super(props);
     this.state = {
-     date: new Date (),
-    };
+      offset: props.offset,
+      currentTime: this.getTimeWithOffset(props.offset),
+    }
+  }
 
+    componentDidMount() {
+      this.interval = setInterval(() => {
+        this.setState({
+          currentTime: this.getTimeWithOffset(this.state.offset),
+        });
+      }, 1000);
+  }
   
-  }
+    componentWillUnmount() {
+      clearInterval(this.interval)
+    }
 
-  componentDidMount() {
-    this.interval = setInterval(() => {
-      this.setState({
-        date: new Date (),
-      });
-    }, 1000);
-  }
-  componentWillUnmount() {
-    clearInterval(this.interval)
-  }
-
-  render() {
-    return (
+    getTimeWithOffset = (offset) => {
+      const currentTime = new Date();
+      const utcOffset = currentTime.getTimezoneOffset() / 60;
+      const adjustedTime = new Date(currentTime.setHours(currentTime.getUTCHours() + offset + utcOffset));
+      return adjustedTime;
+  };
+  
+    render() {
+      return (
      
-      <div className="clock">
-  <div className="clock__location">
-    {this.props.location}
-  </div>
-  <div className="clock__time">
-    {this.state.date.toLocaleTimeString()}
-  </div>
-</div>
-    );
+        <div className="clock">
+          <div className="clock__location">
+            {this.props.location}
+          </div>
+          <div className="clock__time">
+            {this.state.currentTime.toLocaleTimeString()}
+          </div>
+        </div>
+      );
+    }
   }
-}
 
 export default Clock;
 
