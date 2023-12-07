@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 class Dimensions extends Component {
-  this.state = {
+ state = {
     width: null,
     height: null,
   };
@@ -32,7 +32,7 @@ class Dimensions extends Component {
   render() {
     return (
       <div className="dimensions">
-        {`${this.state.width} x ${this.state.height}`}
+        {`${this.state.width}px - ${this.state.height}px`}
       </div>
     );
   }
