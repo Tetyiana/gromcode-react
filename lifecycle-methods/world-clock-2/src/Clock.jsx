@@ -34,7 +34,7 @@ class Clock extends Component {
     {this.props.location}
   </div>
   <div className="clock__time">
-    {moment(this.state.currentTime.toString()).format('h:mm:ss A')}
+    {moment(this.state.currentTime.toString()).format('hh:mm:ss A')}
   </div>
 </div>
     );
