@@ -21,7 +21,7 @@ class Life extends Component {
     componentWillUnmount() {
     console.log('componentWillUnmount: cleanup before DOM related to component will be removed')
   }
-  
+
   render() {
      console.log('return React element to build DOM');
     return (
