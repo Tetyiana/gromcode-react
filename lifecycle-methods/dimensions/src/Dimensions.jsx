@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 class Dimensions extends Component {
-  state = {
+  this.state = {
     width: null,
     height: null,
   };
