@@ -1,13 +1,20 @@
 import React, { Component } from "react";
 
 class ConnectionStatus extends Component {
-  state = {
-    online: true,
+  constructor(props) {
+    super(props);
+    this.state = {
+    online: navigator.onLine,
   };
+  }
+  // state = {
+  //   online: true,
+  // };
 
   componentDidMount() {
     window.addEventListener('online', this.updateOnlineStatus);
     window.addEventListener('offline', this.updateOnlineStatus);
+    
   }
 
   componentWillUnmount() {
