@@ -4,14 +4,13 @@ class ConnectionStatus extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    isOnline: true,
-  };
+      isOnline: true,
+    };
   }
-  
+
   componentDidMount() {
     window.addEventListener('online', this.updateOnlineStatus);
     window.addEventListener('offline', this.updateOnlineStatus);
-    
   }
 
   componentWillUnmount() {
@@ -20,20 +19,23 @@ class ConnectionStatus extends Component {
   }
 
   updateOnlineStatus = () => {
-    
     this.setState({
       isOnline: navigator.onLine,
     });
   };
 
   render() {
-      if (this.state.isOnline === true) {
-       return(<div className='status'>online</div>)
+    if (this.state.isOnline === true) {
+      return <div className='status'>online</div>;
     } else {
-       return (<div className='status_offline'>offline</div>);
- } 
+      return <div className='status_offline'>offline</div>;
+    }
   }
 }
 
 export default ConnectionStatus;
+
+  
+
+
 
