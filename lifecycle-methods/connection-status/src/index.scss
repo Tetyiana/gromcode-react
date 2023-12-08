@@ -20,7 +20,7 @@ body {
 
 .status_offline {
   padding: 8px;
-  border: 2px solid #f00;
+  border: 2px solid;
   border-radius: 8px;
-
+  border-color: #f00;
 }
