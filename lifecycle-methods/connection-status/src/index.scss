@@ -15,12 +15,7 @@ body {
   border: 2px solid #eee;
   border-radius: 8px;
 
-
-}
-
-.status_offline {
-  padding: 8px;
-  border: 2px solid;
-  border-radius: 8px;
-  border-color: #f00;
+  &_offline {
+    border-color: #f00;
+  }
 }
