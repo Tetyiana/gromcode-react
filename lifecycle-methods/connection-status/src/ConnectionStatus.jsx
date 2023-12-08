@@ -26,7 +26,7 @@ class ConnectionStatus extends Component {
   };
 
   render() {
-    const statusClassName = this.state.online ? 'status status_online' : 'status status_offline';
+    const statusClassName = this.state.online ? 'status' : 'status status_offline';
  
 
     return (
@@ -38,3 +38,4 @@ class ConnectionStatus extends Component {
 }
 
 export default ConnectionStatus;
+
