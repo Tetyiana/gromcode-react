@@ -19,9 +19,9 @@ class UserForm extends Component {
   handleSubmit = event => {
     event.preventDefault();
     console.log(this.state);
-  //  if (typeof this.props.onSubmit === "function") {
-  //     this.props.onSubmit(this.state);
-  //   }
+   if (typeof this.props.onSubmit === "function") {
+      this.props.onSubmit(this.state);
+    }
   }
   render() {
     return (
