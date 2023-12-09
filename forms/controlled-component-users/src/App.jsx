@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import UserForm from "./UserForm.jsx";
 
-const user = {
-  name: 'Nik',
-  student: 'true',
-  occupation: 'London',
-  about: 'I like to learn react',
-}
+// const userData = {
+//   name: 'Nik',
+//   student: 'true',
+//   occupation: 'London',
+//   about: 'I like to learn react',
+// }
 
 class App extends Component {
 
@@ -15,9 +15,9 @@ class App extends Component {
   };
 
   render() {
-    return (
+    return  (
       <div>
-        <UserForm createUser={this.createUser} />
+        <UserForm onSubmit={this.createUser} />
       </div>
     );
   }

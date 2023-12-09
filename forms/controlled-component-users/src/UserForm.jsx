@@ -6,9 +6,9 @@ class UserForm extends Component {
     occupation: '',
     about: '',
   }
-  handleChange = (user) => {
+  handleChange = (event) => {
 
-    const { name, value, checked, type } = user.target;
+    const { name, value, checked, type } = event.target;
 
     const val = type === 'checkbox' ? checked : value;
 
@@ -18,8 +18,10 @@ class UserForm extends Component {
   }
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state)
-    this.props.createUser(this.state);
+    console.log(this.state);
+   if (typeof this.props.onSubmit === "function") {
+      this.props.onSubmit(this.state);
+    }
   }
   render() {
     return (
