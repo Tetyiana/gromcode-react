@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import User from './User.jsx';
+import User from "./User.jsx";
 
 class UsersList extends Component {
   render() {
-    const users = this.props.users || [];
+    const { users } = this.props;
 
     return (
       <ul className="users">
-        {users.map(user => (
+        {users.map((user) => (
           <User key={user.id} name={user.name} age={user.age} />
         ))}
       </ul>
@@ -16,4 +16,5 @@ class UsersList extends Component {
 }
 
 export default UsersList;
+
 
