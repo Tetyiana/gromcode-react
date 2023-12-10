@@ -37,10 +37,9 @@ class Filter extends Component {
       filterText,
     });
 
-    // Передача зміненого фільтра до батьківського компонента через props.onChange
-    if (typeof onChange === "function") {
-      onChange(filterText);
-    }
+ 
+      this.props.onChange(filterText);
+    
   };
 
   render() {
