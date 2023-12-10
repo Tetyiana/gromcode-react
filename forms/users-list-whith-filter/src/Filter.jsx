@@ -38,13 +38,14 @@ class Filter extends Component {
             onChange={this.handleFilterChange}
           />
         </div>
-        <UsersList users={usersWithFilter} />
+        <UsersList users={usersWithFilter} filterText={filterText} />
       </div>
     );
   }
 }
 
 export default Filter;
+
 
 
 
