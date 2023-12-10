@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Filter from './Filter.jsx';
+import UsersList from './UsersList.jsx';
 
 const users = [
   { id: 1, name: "John", age: 25 },
@@ -10,5 +10,6 @@ const users = [
 
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<Filter users={users} />, rootElement);
+ReactDOM.render(<UsersList users={users} />, rootElement);
+
 
