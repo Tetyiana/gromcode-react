@@ -1,4 +1,12 @@
-import React from "react";
+import React, {Component} from "react";
+
+const scaleNames = {
+  c: 'Celsius',
+  f: 'Fahrenheit'
+};
+
+
+
 
 class TemperatureInput extends React.Component {
   constructor(props) {
