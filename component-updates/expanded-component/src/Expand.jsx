@@ -1,13 +1,25 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { Component } from "react";
 
-const Expand = ({ isOpen, children, title, onClose }) => {
+class Expand extends Component {
+    state = {
+    isOpen: false,
+  }
 
-    return (
+
+ handleClick = () => {
+    this.setState((e) => ({
+      isOpen: !e.isOpen,
+    }));
+  };
+
+  render() {
+    const { isOpen } = this.state;
+    const { children } = this.props;
+   return (
     <div className="expand border">
         <div className="expand__header">
-          <span className="expand__title">{title}</span>
-          <button className="expand__toggle-btn" onClick={onClose}>
+          <span className="expand__title">Some title</span>
+          <button className="expand__toggle-btn" onClick={this.handleClick}>
             <i className={`fas ${isOpen ? "fa-chevron-down" : "fa-chevron-up"}`}></i>
           </button>
         </div>
@@ -15,16 +27,10 @@ const Expand = ({ isOpen, children, title, onClose }) => {
     </div>
     )
 }
+   
+}
   
-Expand.propTypes = {
-  isOpen: PropTypes.bool,
-  children: PropTypes.element.isRequired,
-  title: PropTypes.string,
-  onClose: PropTypes.func.isRequired, 
-}
-Expand.defaultProps = {
-  title: '',
-  isOpen: false,
-}
+
+
 export default Expand;
 
