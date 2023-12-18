@@ -23,9 +23,9 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        <Numbers title='All numbers' number={this.state.number} />
-        <EvenNumbers title='Even numbers' number={this.state.number} />
-        <OddNumbers title='Odd numbers' number={this.state.number} />
+        <Numbers title='All number' number={this.state.number} />
+        <EvenNumbers title='Even number' number={this.state.number} />
+        <OddNumbers title='Odd number' number={this.state.number} />
         <Numbers title='Just 17' number={17} />
     </div>
   )
