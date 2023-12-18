@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 class Expand extends Component {
     state = {
-    isOpen: false,
+      isOpen: false,
+      title: 'Some title',
   }
 
 
@@ -18,7 +19,7 @@ class Expand extends Component {
    return (
     <div className="expand border">
         <div className="expand__header">
-          <span className="expand__title">Some title</span>
+          <span className="expand__title">{this.state.title}</span>
           <button className="expand__toggle-btn" onClick={this.handleClick}>
             <i className={`fas ${isOpen ? "fa-chevron-down" : "fa-chevron-up"}`}></i>
           </button>
