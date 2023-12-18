@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-const Dialog = ({isOpen, children, title, onClouse})=> {
+const Dialog = ({isOpen, children, title, onClose})=> {
   if(!isOpen){
     return null;
   };
@@ -9,7 +9,7 @@ const Dialog = ({isOpen, children, title, onClouse})=> {
       <div className="dialog">
         <div className="dialog__heading">
           <h4 className="dialog__title">{title}</h4>
-          <button className="dialog__close-btn" onClick={onClouse}>+</button>
+          <button className="dialog__close-btn" onClick={onClose}>+</button>
         </div>
         <div className="dialog__content">
           {children}
@@ -21,7 +21,7 @@ Dialog.propTypes = {
   isOpen: PropTypes.bool,
   children: PropTypes.element.isRequired,
   title: PropTypes.string,
-  onClouse: PropTypes.func.isRequired, 
+  onClose: PropTypes.func.isRequired, 
 }
 Dialog.defaultProps = {
   title: '',
