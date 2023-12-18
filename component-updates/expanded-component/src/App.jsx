@@ -9,8 +9,8 @@ class App extends Component {
 
 
  handleClick = () => {
-    this.setState((prevState) => ({
-      isOpen: !prevState.isOpen,
+    this.setState((e) => ({
+      isOpen: !e.isOpen,
     }));
   };
 
