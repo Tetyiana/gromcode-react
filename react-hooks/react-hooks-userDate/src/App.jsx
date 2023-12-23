@@ -18,7 +18,7 @@ const App=()=> {
         </ul> 
         <Switch>
            <Route path="/users/:userId" ><User /></Route> 
-           <Route path="/"><span>Select a user pleas</span></Route>
+           <Route path="/"><span>Select a user please</span></Route>
         </Switch>
       </div>
       </Router>
